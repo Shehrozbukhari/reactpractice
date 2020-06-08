@@ -33,4 +33,8 @@ jobs:
         cmd: install
     - name: install build
       run: yarn build
-
+      # deoloye surge
+    - name: intalling the surge
+      run: npm install -g surge
+    - name: deploying the surge
+      run: surge ./ bootcampassign1.surge.sh --token ${{ secrets.SURGE }}
